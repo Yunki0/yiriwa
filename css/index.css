@@ -28,7 +28,7 @@ html {
 
 .container { 
     max-width: 1200px; 
-    margin: 0 auto; 
+    margin: 50px auto; 
     padding: 60px 20px; 
 }
 .text-gold { 
@@ -334,27 +334,56 @@ footer {
     font-size: 0.85rem; /* Texte plus petit */
     line-height: 1.4;
     margin-bottom: 10px;
+    color: var(--gold);
+}
+
+.footer-motto{
+    font-size: 0.75rem; /* Devise plus petite */
+    font-style: italic;
+    color: var(--beige);
 }
 
 .footer-links li, .footer-contact li {
     margin-bottom: 8px; /* Moins d'espace entre les liens */
     font-size: 0.85rem;
+    color: var(--white);
+    list-style: none; 
+}
+
+.footer-links a {
+    color: var(--white);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--gold);
 }
 
 .social-icon {
     width: 32px; /* Icônes plus petites */
     height: 32px;
     font-size: 1rem;
+    color: var(--white);
+    padding-left: 15px;
 }
 
 /* Bottom bar plus fine */
 .footer-bottom {
     background: rgba(0, 0, 0, 0.2);
-    padding: 15px 0; /* Réduit de 25px à 15px */
+    padding: 10px 20px; /* Réduit de 20px à 10px */
 }
 
 .footer-bottom p {
     font-size: 0.75rem;
+    color: var(--beige);
+}
+
+.footer-bottom .container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    line-height: 30px;
 }
 
 
