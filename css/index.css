@@ -27,10 +27,11 @@ html {
 }
 
 .container { 
-    max-width: 1200px; 
+    max-width: 1200px;
     margin: 50px auto; 
     padding: 60px 20px; 
 }
+
 .text-gold { 
     color: var(--gold); 
 }
@@ -299,6 +300,378 @@ html {
     border-radius: 10px; 
     text-decoration: none; 
     font-size: 1.3rem; 
+}
+
+/* --- SECTION PROGRAMMES --- */
+.tabs-container {
+    margin-top: 40px;
+}
+
+.tabs-header {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.tab-btn {
+    background: rgba(31, 77, 58, 0.1);
+    border: 2px solid var(--green);
+    color: var(--green);
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-family: 'Bebas Neue';
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.tab-btn.active, .tab-btn:hover {
+    background: var(--green);
+    color: var(--gold);
+    box-shadow: 0 5px 15px rgba(31, 77, 58, 0.3);
+}
+
+.tab-content {
+    display: none; /* Caché par défaut */
+    animation: fadeIn 0.5s ease;
+}
+
+.tab-content.active {
+    display: block; /* Affiché quand actif */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.prog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.day-card {
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    border-left: 5px solid var(--gold);
+    box-shadow: var(--shadow);
+}
+
+.day-card h4 {
+    font-family: 'Bebas Neue';
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding-bottom: 10px;
+}
+
+.day-card ul {
+    list-style: none;
+}
+
+.day-card ul li {
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.day-card ul li i {
+    color: var(--green);
+    width: 20px;
+    text-align: center;
+}
+
+/* Couleur Jaune Or sur les titres d'activités comme demandé */
+.text-gold {
+    color: var(--gold) !important;
+}
+
+/* --- SECTION LOCALISATION --- */
+.map-wrapper {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+    align-items: stretch;
+}
+
+.google-map {
+    flex: 2;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    border: 4px solid var(--white);
+}
+
+.map-info-card {
+    flex: 1;
+    background: var(--green); /* Fond Vert Forêt pour contraster avec le jaune */
+    color: var(--white);
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+    box-shadow: 0 10px 30px rgba(31, 77, 58, 0.3);
+}
+
+.info-detail {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.info-detail i {
+    font-size: 1.5rem;
+    /* La couleur jaune demandée */
+    color: var(--gold) !important; 
+    margin-top: 5px;
+}
+
+.info-detail h4 {
+    font-family: 'Bebas Neue';
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    color: var(--gold); /* Titre en jaune aussi */
+    margin-bottom: 5px;
+}
+
+.info-detail p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    line-height: 1.4;
+}
+
+.btn-location {
+    background: var(--gold);
+    color: var(--green);
+    text-align: center;
+    padding: 12px;
+    border-radius: 10px;
+    font-family: 'Bebas Neue';
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.btn-location:hover {
+    background: var(--white);
+    transform: scale(1.05);
+}
+
+/* Responsive Localisation */
+@media (max-width: 900px) {
+    .map-wrapper {
+        flex-direction: column;
+    }
+    .google-map {
+        height: 300px;
+    }
+}
+
+
+/* --- SECTION PAIEMENT (TABLEAU) --- */
+.participation-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+    font-size: 1.1rem;
+}
+
+.table-container {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    overflow: hidden; /* Pour arrondir les coins du tableau */
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    margin-bottom: 20px;
+}
+
+.payment-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.payment-table nations thead tr {
+    background-color: var(--green);
+    color: var(--gold);
+}
+
+.payment-table th, .payment-table td {
+    padding: 18px 25px;
+}
+
+.payment-table th {
+    font-family: 'Bebas Neue';
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+}
+
+.payment-table th i {
+    margin-right: 10px;
+}
+
+.payment-table tbody tr {
+    border-bottom: 1px solid rgba(31, 77, 58, 0.1);
+    transition: 0.3s;
+}
+
+.payment-table tbody tr:hover {
+    background-color: rgba(242, 183, 5, 0.05); /* Léger survol jaune */
+}
+
+.payment-table td {
+    font-size: 0.95rem;
+    color: var(--brun-bois);
+}
+
+.contact-link {
+    color: var(--green);
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+}
+
+.contact-link:hover {
+    color: var(--red);
+}
+
+/* Note de date limite */
+.deadline-note {
+    background: var(--red);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 0.95rem;
+    box-shadow: 0 5px 15px rgba(166, 61, 47, 0.3);
+}
+
+.deadline-note i {
+    color: var(--gold);
+    margin-right: 10px;
+}
+
+/* --- RESPONSIVE TABLE (MOBILE) --- */
+@media (max-width: 768px) {
+    .payment-table thead {
+        display: none; /* Cache l'entête sur mobile */
+    }
+    
+    .payment-table, .payment-table tbody, .payment-table tr, .payment-table td {
+        display: block;
+        width: 100%;
+    }
+    
+    .payment-table tr {
+        margin-bottom: 15px;
+        border: 1px solid rgba(31, 77, 58, 0.1);
+        border-radius: 10px;
+    }
+    
+    .payment-table td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+        border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+    
+    .payment-table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 20px;
+        width: 45%;
+        text-align: left;
+        font-weight: 700;
+        color: var(--green);
+        text-transform: uppercase;
+        font-size: 0.8rem;
+    }
+}
+
+/* --- SECTION DOCUMENTS --- */
+.doc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.doc-card {
+    background: rgba(255, 255, 255, 0.05); /* Effet verre */
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(242, 183, 5, 0.3); /* Bordure or translucide */
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    transition: 0.4s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: var(--shadow);
+}
+
+.doc-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--gold);
+    box-shadow: 0 15px 35px rgba(242, 183, 5, 0.2);
+}
+
+.doc-icon {
+    font-size: 3rem;
+    color: var(--gold) !important; /* Jaune Or pour les icônes */
+    margin-bottom: 20px;
+}
+
+.doc-info h3 {
+    font-family: 'Bebas Neue';
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.doc-info p {
+    font-size: 0.85rem;
+    color: #555;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.btn-download {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: var(--green);
+    color: var(--white);
+    padding: 12px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-family: 'Bebas Neue';
+    font-size: 1.1rem;
+    transition: 0.3s;
+    width: 100%;
+}
+
+.btn-download:hover {
+    background: var(--gold);
+    color: var(--green);
+}
+
+.btn-download i {
+    font-size: 1rem;
 }
 
 /* --- FOOTER COMPACT --- */
