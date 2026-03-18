@@ -9,10 +9,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="js/main.js"></script>
 </head>
 <body>
-
+    <button id="backToTop" title="Retour en haut"><i class="fas fa-arrow-up"></i></button>
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">YIRIWA <span>2026</span></div>
@@ -40,7 +41,24 @@
                 <div class="badge"><i class="fas fa-map-marker-alt"></i> Kpass, Dabou</div>
                 <div class="badge"><i class="fas fa-wallet"></i> 13 000 FCFA</div>
             </div>
-
+            <div id="countdown" class="countdown-container">
+                <div class="time-segment">
+                    <span id="days" class="time-val">00</span>
+                    <span class="time-label">Jours</span>
+                </div>
+                <div class="time-segment">
+                    <span id="hours" class="time-val">00</span>
+                    <span class="time-label">Heures</span>
+                </div>
+                <div class="time-segment">
+                    <span id="minutes" class="time-val">00</span>
+                    <span class="time-label">Min</span>
+                </div>
+                <div class="time-segment">
+                    <span id="seconds" class="time-val">00</span>
+                    <span class="time-label">Sec</span>
+                </div>
+            </div>
             <div class="hero-btns">
                 <a href="#participation" class="btn btn-red">📋 Inscrire mon enfant</a>
             </div>
@@ -48,26 +66,26 @@
     </header>
 
     <section id="camp" class="container">
-        <h2 class="section-title">Qu’est-ce que le camp <span class="text-green">YIRIWA</span> ?</h2>
+        <h2 class="section-title" data-aos="zoom-in">Qu’est-ce que le camp <span class="text-green">YIRIWA</span> ?</h2>
         <p class="section-desc">Le mot YIRIWA signifie progrès et expansion. C'est un moment fort pour vivre la méthode scoute en pleine nature.</p>
         
         <div class="grid-4">
-            <div class="glass-card">
+            <div class="glass-card" data-aos="fade-up" data-aos-delay="100">
                 <i class="fas fa-fist-raised"></i>
                 <h3>Autonomie</h3>
                 <p>Apprendre à se débrouiller seul et en équipe.</p>
             </div>
-            <div class="glass-card">
+            <div class="glass-card" data-aos="fade-up" data-aos-delay="200">
                 <i class="fas fa-users"></i>
                 <h3>Esprit d'équipe</h3>
                 <p>Bâtir des liens solides au sein de la patrouille.</p>
             </div>
-            <div class="glass-card">
+            <div class="glass-card" data-aos="fade-up" data-aos-delay="300">
                 <i class="fas fa-hands-helping"></i>
                 <h3>Fraternité</h3>
                 <p>Vivre les valeurs de partage et de scoutisme.</p>
             </div>
-            <div class="glass-card">
+            <div class="glass-card" data-aos="fade-up" data-aos-delay="400">
                 <i class="fas fa-chart-line"></i>
                 <h3>Progression</h3>
                 <p>Évaluer et valider les étapes de chaque jeune.</p>
@@ -105,7 +123,7 @@
             <p>La participation s'élève à <strong>13 000 FCFA</strong> par scout. Les paiements sont collectés directement au sein des paroisses par les responsables désignés ci-dessous :</p>
         </div>
 
-        <div class="table-container">
+        <div class="table-container" data-aos="fade-left">
             <table class="payment-table">
                 <thead>
                     <tr>
@@ -117,47 +135,40 @@
                 <tbody>
                     <tr>
                         <td data-label="Paroisse">Christ Roi de Feh Kesseh</td>
-                        <td data-label="Responsable">xxxx</td>
+                        <td data-label="Responsable">Cheftaine ATTA</td>
                         <td data-label="Contact">
-                            <a href="tel:0102030405" class="contact-link"><i class="fas fa-phone text-gold"></i> 01 02 03 04 05</a>
+                            <a href="tel:0787178893" class="contact-link"><i class="fas fa-phone text-gold"></i> 07 87 17 88 93</a>
                         </td>
                     </tr>
                     <tr>
                         <td data-label="Paroisse">Sainte Bernadette de Promogim</td>
-                        <td data-label="Responsable">xxxx</td>
+                        <td data-label="Responsable">Cheftaine Anne-Emmanuelle</td>
                         <td data-label="Contact">
-                            <a href="tel:0102030405" class="contact-link"><i class="fas fa-phone text-gold"></i> 01 02 03 04 05</a>
+                            <a href="tel:0769394539" class="contact-link"><i class="fas fa-phone text-gold"></i> 07 69 39 45 39</a>
                         </td>
                     </tr>
                     <tr>
                         <td data-label="Paroisse">Sacré-Cœur d'Akandje 1 et 2</td>
-                        <td data-label="Responsable">xxxx</td>
+                        <td data-label="Responsable">Cheftaine DIOP</td>
                         <td data-label="Contact">
-                            <a href="tel:0102300405" class="contact-link"><i class="fas fa-phone text-gold"></i> 01 02 30 04 05</a>
+                            <a href="tel:0709785225" class="contact-link"><i class="fas fa-phone text-gold"></i> 07 09 78 52 25</a>
                         </td>
                     </tr>
                     <tr>
-                        <td data-label="Paroisse">Notre Dame de l'annonciation de Oribat</td>
-                        <td data-label="Responsable">xxxx</td>
+                        <td data-label="Paroisse">Notre Dame de l'annonciation d'Oribat</td>
+                        <td data-label="Responsable">Cheftaine Christy</td>
                         <td data-label="Contact">
-                            <a href="tel:0102300405" class="contact-link"><i class="fas fa-phone text-gold"></i> 01 02 30 04 05</a>
+                            <a href="tel:0153818346" class="contact-link"><i class="fas fa-phone text-gold"></i> 01 53 81 83 46</a>
                         </td>
                     </tr>
                     <tr>
                         <td data-label="Paroisse">Notre Dame de la Paix de SynaTrésor</td>
-                        <td data-label="Responsable">xxxx</td>
+                        <td data-label="Responsable">Cheftaine Sabine</td>
                         <td data-label="Contact">
-                            <a href="tel:0102300405" class="contact-link"><i class="fas fa-phone text-gold"></i> 01 02 30 04 05</a>
+                            <a href="tel:0767218771" class="contact-link"><i class="fas fa-phone text-gold"></i> 07 67 21 87 71</a>
                         </td>
                     </tr>
-                    <tr>
-                        <td data-label="Paroisse">Saint Jean Marie Vianney</td>
-                        <td data-label="Responsable">xxxx</td>
-                        <td data-label="Contact">
-                            <a href="tel:0102300405" class="contact-link"><i class="fas fa-phone text-gold"></i> 01 02 30 04 05</a>
-                        </td>
-                    </tr>
-                    </tbody>
+                </tbody>
             </table>
         </div>
 
@@ -198,6 +209,14 @@
                             <li><i class="fas fa-film"></i> Colo’ciné</li>
                         </ul>
                     </div>
+                    <div class="day-card">
+                        <h4 class="text-gold"> Vendredi 10 Avril</h4>
+                        <ul>
+                            <li><i class="fas fa-palette"></i> Atelier: Je te fais confiance</li>
+                            <li><i class="fas fa-heart"></i> Partage ta plume</li>
+                            <li><i class="fas fa-egg"></i> Nid en joie</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
@@ -207,8 +226,9 @@
                         <h4 class="text-gold">Mercredi 08 Avril</h4>
                         <ul>
                             <li><i class="fas fa-paw"></i> Atelier fabric loup</li>
-                            <li><i class="fas fa-sun"></i> Le réveil du clan</li>
-                            <li><i class="fas fa-scroll"></i> Rites et Traditions</li>
+                            <li><i class="fas fa-tree"></i> Olymp Jaune</li>
+                            <li><i class="fas fa-sun"></i> Ferao song</li>
+                            <li><i class="fas fa-book-open-reader"></i> Conte à la </li>
                         </ul>
                     </div>
                     <div class="day-card">
@@ -217,6 +237,15 @@
                             <li><i class="fas fa-map-signs"></i> Le Sentier du Loup</li>
                             <li><i class="fas fa-fire"></i> Veillée Totémisation</li>
                             <li><i class="fas fa-fist-raised"></i> Grande Chasse</li>
+                        </ul>
+                    </div>
+                    <div class="day-card">
+                        <h4 class="text-gold">Vendredi 10 Avril</h4>
+                        <ul>
+                            <li><i class="fas fa-palette"></i> Colonie en couleurs</li>
+                            <li><i class="fas fa-heart"></i> Jeu des bonnes actions</li>
+                            <li><i class="fas fa-egg"></i> L’œuf de pâques</li>
+                            <li><i class="fas fa-film"></i> Colo’ciné</li>
                         </ul>
                     </div>
                 </div>
@@ -287,7 +316,7 @@
         <p class="section-desc">Téléchargez et imprimez les documents nécessaires pour la constitution du dossier de chaque scout.</p>
 
         <div class="doc-grid">
-            <div class="doc-card">
+            <div class="doc-card" data-aos="flip-left">
                 <div class="doc-icon"><i class="fas fa-file-signature"></i></div>
                 <div class="doc-info">
                     <h3 class="text-gold">Autorisation Parentale</h3>
@@ -298,7 +327,7 @@
                 </div>
             </div>
 
-            <div class="doc-card">
+            <div class="doc-card" data-aos="flip-right">
                 <div class="doc-icon"><i class="fas fa-file-medical"></i></div>
                 <div class="doc-info">
                     <h3 class="text-gold">Fiche Médicale</h3>
@@ -309,7 +338,7 @@
                 </div>
             </div>
 
-            <div class="doc-card">
+            <div class="doc-card" data-aos="flip-left">
                 <div class="doc-icon"><i class="fas fa-clipboard-list"></i></div>
                 <div class="doc-info">
                     <h3 class="text-gold">Liste du Trousseau</h3>
@@ -382,17 +411,21 @@
                 <div class="footer-col">
                     <h4>Navigation</h4>
                     <ul class="footer-links">
-                        <li><a href="#accueil"><i class="fas fa-chevron-right"></i> Accueil</a></li>
-                        <li><a href="#camp"><i class="fas fa-chevron-right"></i> Le Camp Yiriwa</a></li>
-                        <li><a href="#infos"><i class="fas fa-chevron-right"></i> Infos Pratiques</a></li>
-                        <li><a href="#participation"><i class="fas fa-chevron-right"></i> Inscriptions</a></li>
+                        <li><a href="#accueil">Accueil</a></li>
+                        <li><a href="#camp">Le Camp</a></li>
+                        <li><a href="#infos">Infos</a></li>
+                        <li><a href="#programmes">Programme</a></li>
+                        <li><a href="#localisation">Lieu</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-col">
                     <h4>Contactez-nous</h4>
                     <ul class="footer-contact">
-                        <li><i class="fas fa-phone-alt"></i> +225 07 07 32 07 04</li>
+                        <li><i class="fas fa-phone-alt"></i><a href="tel:+2250707320704" style="color: #fff; text-decoration: none;"> +225 07 07 32 07 04</a></li>
+                        <li><i class="fas fa-phone-alt"></i><a href="tel:+2250747310703" style="color: #fff; text-decoration: none;"> +225 07 47 31 07 03</a></li>
+                        <li><i class="fas fa-phone-alt"></i><a href="tel:+2250778421775" style="color: #fff; text-decoration: none;"> +225 07 78 42 17 75</a></li>
                         <li><i class="fas fa-envelope"></i> district.blacktailshark@gmail.com</li>
                         <li><i class="fas fa-map-marker-alt"></i> Kpass, Commune de Dabou</li>
                     </ul>
@@ -404,10 +437,8 @@
                         <a href="https://www.facebook.com/BlackTailShark" class="social-icon" target="_blank"><i class="fab fa-facebook-f"></i></a>
                     </div>
                 </div>
-
             </div>
         </div>
-
         <div class="footer-bottom">
             <div class="container">
                 <p>&copy; 2026 District Black Tail Shark - Association des Scouts Catholiques de Côte d'Ivoire.</p>
@@ -415,5 +446,12 @@
             </div>
         </div>
     </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000, // Durée de l'animation en ms
+            once: true,     // L'animation ne se joue qu'une seule fois
+        });
+    </script>
 </body>
 </html>
