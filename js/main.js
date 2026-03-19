@@ -37,23 +37,20 @@ const countdown = () => {
         document.getElementById("minutes").innerText = Math.floor((gap % hour) / minute);
         document.getElementById("seconds").innerText = Math.floor((gap % minute) / second);
     } else {
-        document.getElementById("countdown").innerHTML = "<h3>C'est l'heure du camp !</h3>";
+        document.getElementById("countdown").innerHTML = `
+        <div class="countdown-finished-box" >
+            <div class="finished-icon"><i class="fas fa-campground"></i></div>
+            <div class="finished-text">
+                <h3>C'EST PARTI POUR <span class="text-gold">YIRIWA 2026</span> !</h3>
+            </div>
+            <a href="#localisation" class="btn-finished">Nous rejoindre sur la carte</a>
+        </div>
+    `;
+        // On enlève le flex du container pour que la box prenne sa place proprement
+        document.getElementById("countdown").style.display = "block";
     }
 };
 
 // Mise à jour chaque seconde
 setInterval(countdown, 1000);
 countdown(); // Appel immédiat pour éviter le "00" au chargement
-
-window.onscroll = function() {
-    let btn = document.getElementById("backToTop");
-    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-        btn.style.display = "block";
-    } else {
-        btn.style.display = "none";
-    }
-};
-
-document.getElementById("backToTop").onclick = function() {
-    window.scrollTo({top: 0, behavior: 'smooth'});
-};

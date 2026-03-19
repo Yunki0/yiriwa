@@ -13,19 +13,25 @@
     <script src="js/main.js"></script>
 </head>
 <body>
-    <button id="backToTop" title="Retour en haut"><i class="fas fa-arrow-up"></i></button>
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">YIRIWA <span>2026</span></div>
+            
             <ul class="nav-links">
                 <li><a href="#accueil">Accueil</a></li>
                 <li><a href="#camp">Le Camp</a></li>
                 <li><a href="#infos">Infos</a></li>
                 <li><a href="#programmes">Programme</a></li>
-                <li><a href="#localisation">Lieu</a></li>
+                <li><a href="#documents">Documents</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <a href="#participation" class="btn-nav">S'inscrire</a>
+            
+            <div class="nav-actions">
+                <a href="#localisation" class="btn-nav btn-outline">Lieu</a>
+                <a href="#contact" class="btn-nav btn-fill">S'inscrire</a>
+            </div>
+
+            <div class="menu-toggle"><i class="fas fa-bars"></i></div>
         </div>
     </nav>
 
@@ -60,7 +66,7 @@
                 </div>
             </div>
             <div class="hero-btns">
-                <a href="#participation" class="btn btn-red">📋 Inscrire mon enfant</a>
+                <a href="#contact" class="btn btn-red">📋 Inscrire mon enfant</a>
             </div>
         </div>
     </header>
@@ -116,7 +122,226 @@
         </div>
     </section>
 
-    <section id="participation" class="container">
+    <section id="programmes" class="container">
+        <h2 class="section-title">Programmes des <span class="text-gold">Branches</span></h2>
+        <p class="section-desc">Découvrez les activités spécifiques adaptées à chaque classe d'âge conformément au TDR YIRIWA 2026.</p>
+
+        <div class="tabs-container">
+            <div class="tabs-header">
+                <button class="tab-btn active" onclick="openTab(event, 'oisillons')">SÊTÊ (Colonie)</button>
+                <button class="tab-btn" onclick="openTab(event, 'louveteaux')">N'DJROUMAN (Meute)</button>
+                <button class="tab-btn" onclick="openTab(event, 'eclaireurs')">ABROUMAN (Troupe)</button>
+                <button class="tab-btn" onclick="openTab(event, 'cheminots')">M'BÉDIÉ (Génération)</button>
+                <button class="tab-btn" onclick="openTab(event, 'routiers')">M'BORMAN (Communauté)</button>
+            </div>
+
+            <div id="oisillons" class="tab-content active">
+                <div class="prog-grid">
+                    <div class="day-card">
+                        <h4 class="text-gold">Mardi 07 Avril</h4>
+                        <ul>
+                            <li><i class="fas fa-book"></i> Histoire de la colonie et mime des personnages</li>
+                        </ul>
+                    </div>
+                    <div class="day-card">
+                        <h4 class="text-gold">Mercredi 08 Avril</h4>
+                        <ul>
+                            <li><i class="fas fa-tools"></i> Atelier de bricolage</li>
+                            <li><i class="fas fa-music"></i> Pause en musique</li>
+                            <li><i class="fas fa-trophy"></i> Oisi’ olympiade</li>
+                            <li><i class="fas fa-pray"></i> Mon ami Jésus</li>
+                        </ul>
+                    </div>
+                    <div class="day-card">
+                        <h4 class="text-gold">Jeudi 09 Avril</h4>
+                        <ul>
+                            <li><i class="fas fa-palette"></i> Colonie en couleurs</li>
+                            <li><i class="fas fa-heart"></i> Jeu des bonnes actions</li>
+                            <li><i class="fas fa-egg"></i> L’œuf de pâques</li>
+                            <li><i class="fas fa-film"></i> Colo’ciné</li>
+                        </ul>
+                    </div>
+                    <div class="day-card">
+                        <h4 class="text-gold"> Vendredi 10 Avril</h4>
+                        <ul>
+                            <li><i class="fas fa-palette"></i> Atelier: Je te fais confiance</li>
+                            <li><i class="fas fa-heart"></i> Partage ta plume</li>
+                            <li><i class="fas fa-egg"></i> Nid en joie</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="louveteaux" class="tab-content">
+                <div class="prog-grid">
+                    <div class="day-card">
+                        <h4 class="text-gold">Mardi 07 Avril</h4>
+                        <ul>
+                            <li><i class="fas fa-lightbulb"></i> De l'obscurité à la lumière</li>
+                        </ul>
+                    </div>                    
+                    <div class="day-card">
+                        <h4 class="text-gold">Mercredi 08 Avril</h4>
+                        <ul>
+                            <li><i class="fas fa-paw"></i> Atelier fabric loup</li>
+                            <li><i class="fas fa-tree"></i> Olymp Jaune</li>
+                            <li><i class="fas fa-sun"></i> Ferao song</li>
+                            <li><i class="fas fa-book-open-reader"></i> Conte de la meute et jeu de mime de la jungle</li>
+                        </ul>
+                    </div>
+                    <div class="day-card">
+                        <h4 class="text-gold">Jeudi 09 Avril</h4>
+                        <ul>
+                            <li><i class="fas fa-chess-board"></i>Atelier apprentissage (Les griffes de bagheera)</li>
+                            <li><i class="fa-solid fa-paw"></i>Chasse au gibier</li>
+                            <li><i class="fa-solid fa-music"></i>La voix louve</li>
+                        </ul>
+                    </div>
+                    <div class="day-card">
+                        <h4 class="text-gold">Vendredi 10 Avril</h4>
+                        <ul>
+                            <li><i class="fas fa-tree"></i>Jungle expedition</li>
+                            <li><i class="fas fa-rose"></i>La fleur rouge</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="eclaireurs" class="tab-content">
+                <div class="prog-grid">
+                    <div class="day-card">
+                        <h4 class="text-gold">Mercredi 08 Avril</h4>
+                        <ul>
+                            <li><i class="fas fa-hiking"></i> Le parcours du Troupier</li>
+                            <li><i class="fas fa-star"></i> Incroyable talent</li>
+                        </ul>
+                    </div>
+                    <div class="day-card">
+                        <h4 class="text-gold">Jeudi 09 Avril</h4>
+                        <ul>
+                            <li><i class="fas fa-book"></i> J'apprends au village</li>
+                            <li><i class="fas fa-users"></i> Pat'compet</li>
+                            <li><i class="fas fa-music"></i> La soirée du Rossignol</li>
+                        </ul>
+                    </div>
+                    <div class="day-card">
+                        <h4 class="text-gold">Vendredi 10 Avril</h4>
+                        <ul>
+                            <li><i class="fas fa-hiking"></i> Randonnée a la découverte de kpass</li>
+                            <li><i class="fa-regular fa-compass"></i> A la decouverte de l'imaginaire</li>
+                            <li><i class="fas fa-question-circle"></i> Quiz party</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="cheminots" class="tab-content">
+                <div class="prog-grid">
+                    <div class="day-card">
+                        <h4 class="text-gold">Mardi 07 Avril</h4>
+                        <ul>
+                            <li><i class="fas fa-road"></i> Sur la route de Damas</li>
+                        </ul>
+                    </div>
+                    <div class="day-card">
+                        <h4 class="text-gold">Mercredi 08 Avril</h4>
+                        <ul>
+                            <li><i class="fas fa-tree"></i> Sous l'arbre à palabre</li>
+                            <li><i class="fas fa-search"></i> A la recherche de l'objet royal</li>
+                            <li><i class="fas fa-book"></i> Veillée contes africains</li>
+                        </ul>
+                    </div>
+                    <div class="day-card">
+                        <h4 class="text-gold">Jeudi 09 Avril</h4>
+                        <ul>
+                            <li><i class="fas fa-gem"></i> A la découverte de l'or blanc et rouge</li>
+                            <li><i class="fas fa-medal"></i> Parcours du Low</li>
+                            <li><i class="fas fa-medal"></i> A chez nous pays</li>
+                        </ul>
+                    </div>
+                    <div class="day-card">
+                        <h4 class="text-gold">Vendredi 10 Avril</h4>
+                        <ul>
+                            <li><i class="fas fa-road"></i> Mon beau Paysage</li>
+                            <li><i class="fas fa-medal"></i> A la découverte de l'imaginaire BTS</li>
+                            <li><i class="fas fa-medal"></i> Olympiade Scoutes</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="routiers" class="tab-content">
+                <div class="prog-grid">
+                    <div class="day-card">
+                        <h4 class="text-gold">Mercredi 08 Avril</h4>
+                        <ul>
+                            <li><i class="fas fa-hands-helping"></i> Initiation aux techniques d'installations</li>
+                            <li><i class="fas fa-medal"></i> Reds Olympiade</li>
+                            <li><i class="fas fa-star"></i> A la belle étoile</li>
+                        </ul>
+                    </div>
+                    <div class="day-card">
+                        <h4 class="text-gold">Jeudi 09 Avril</h4>
+                        <ul>
+                            <li><i class="fas fa-hands-helping"></i> Kpass Service Day</li>
+                            <li><i class="fas fa-ambulance"></i> Secourisme</li>
+                            <li><i class="fas fa-comments"></i> "Asseyons-nous et Discutons"</li>
+                        </ul>
+                    </div>
+                    <div class="day-card">
+                        <h4 class="text-gold">Vendredi 10 Avril</h4>
+                        <ul>
+                            <li><i class="fas fa-road"></i> Kpass Krele Kpa</li>
+                            <li><i class="fas fa-book"></i> A la découverte de l'imaginaire BTS</li>
+                            <li><i class="fas fa-comments"></i> Festi Gaou</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section id="documents" class="container">
+        <h2 class="section-title">Documents <span class="text-gold">Officiels</span></h2>
+        <p class="section-desc">Téléchargez et imprimez les documents nécessaires pour la constitution du dossier de chaque scout.</p>
+
+        <div class="doc-grid">
+            <div class="doc-card" data-aos="flip-left">
+                <div class="doc-icon"><i class="fas fa-file-signature"></i></div>
+                <div class="doc-info">
+                    <h3 class="text-gold">Autorisation Parentale</h3>
+                    <p>Obligatoire pour tous les mineurs. À remplir et signer par le tuteur légal.</p>
+                    <a href="" download class="btn-download">
+                        <i class="fas fa-download"></i> Télécharger
+                    </a>
+                </div>
+            </div>
+
+            <div class="doc-card" data-aos="flip-right">
+                <div class="doc-icon"><i class="fas fa-file-medical"></i></div>
+                <div class="doc-info">
+                    <h3 class="text-gold">Fiche Médicale</h3>
+                    <p>Essentielle pour le suivi de la santé de l'enfant durant les 5 jours de camp.</p>
+                    <a href="" download class="btn-download">
+                        <i class="fas fa-download"></i> Télécharger
+                    </a>
+                </div>
+            </div>
+
+            <div class="doc-card" data-aos="flip-left">
+                <div class="doc-icon"><i class="fas fa-clipboard-list"></i></div>
+                <div class="doc-info">
+                    <h3 class="text-gold">Liste du Trousseau</h3>
+                    <p>La liste complète des effets personnels et du matériel de campisme à emporter.</p>
+                    <a href="" download class="btn-download">
+                        <i class="fas fa-download"></i> Télécharger
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="container">
         <h2 class="section-title">Frais & <span class="text-gold">Paiements</span></h2>
         
         <div class="participation-intro">
@@ -176,180 +401,7 @@
             <i class="fas fa-exclamation-triangle"></i> Date limite de paiement : <strong>Vendredi 03 Avril 2026 à 22h00</strong>.
         </div>
     </section>
-    <section id="programmes" class="container">
-        <h2 class="section-title">Programmes des <span class="text-gold">Branches</span></h2>
-        <p class="section-desc">Découvrez les activités spécifiques adaptées à chaque classe d'âge conformément au TDR YIRIWA 2026.</p>
 
-        <div class="tabs-container">
-            <div class="tabs-header">
-                <button class="tab-btn active" onclick="openTab(event, 'oisillons')">SÊTÊ (Colonie)</button>
-                <button class="tab-btn" onclick="openTab(event, 'louveteaux')">N'DJROUMAN (Meute)</button>
-                <button class="tab-btn" onclick="openTab(event, 'eclaireurs')">ABROUMAN (Troupe)</button>
-                <button class="tab-btn" onclick="openTab(event, 'cheminots')">M'BÉDIÉ (Génération)</button>
-                <button class="tab-btn" onclick="openTab(event, 'routiers')">M'BORMAN (Communauté)</button>
-            </div>
-
-            <div id="oisillons" class="tab-content active">
-                <div class="prog-grid">
-                    <div class="day-card">
-                        <h4 class="text-gold">Mercredi 08 Avril</h4>
-                        <ul>
-                            <li><i class="fas fa-tools"></i> Atelier de bricolage</li>
-                            <li><i class="fas fa-music"></i> Pause en musique</li>
-                            <li><i class="fas fa-trophy"></i> Oisi’ olympiade</li>
-                            <li><i class="fas fa-pray"></i> Mon ami Jésus</li>
-                        </ul>
-                    </div>
-                    <div class="day-card">
-                        <h4 class="text-gold">Jeudi 09 Avril</h4>
-                        <ul>
-                            <li><i class="fas fa-palette"></i> Colonie en couleurs</li>
-                            <li><i class="fas fa-heart"></i> Jeu des bonnes actions</li>
-                            <li><i class="fas fa-egg"></i> L’œuf de pâques</li>
-                            <li><i class="fas fa-film"></i> Colo’ciné</li>
-                        </ul>
-                    </div>
-                    <div class="day-card">
-                        <h4 class="text-gold"> Vendredi 10 Avril</h4>
-                        <ul>
-                            <li><i class="fas fa-palette"></i> Atelier: Je te fais confiance</li>
-                            <li><i class="fas fa-heart"></i> Partage ta plume</li>
-                            <li><i class="fas fa-egg"></i> Nid en joie</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div id="louveteaux" class="tab-content">
-                <div class="prog-grid">
-                    <div class="day-card">
-                        <h4 class="text-gold">Mercredi 08 Avril</h4>
-                        <ul>
-                            <li><i class="fas fa-paw"></i> Atelier fabric loup</li>
-                            <li><i class="fas fa-tree"></i> Olymp Jaune</li>
-                            <li><i class="fas fa-sun"></i> Ferao song</li>
-                            <li><i class="fas fa-book-open-reader"></i> Conte à la </li>
-                        </ul>
-                    </div>
-                    <div class="day-card">
-                        <h4 class="text-gold">Jeudi 09 Avril</h4>
-                        <ul>
-                            <li><i class="fas fa-map-signs"></i> Le Sentier du Loup</li>
-                            <li><i class="fas fa-fire"></i> Veillée Totémisation</li>
-                            <li><i class="fas fa-fist-raised"></i> Grande Chasse</li>
-                        </ul>
-                    </div>
-                    <div class="day-card">
-                        <h4 class="text-gold">Vendredi 10 Avril</h4>
-                        <ul>
-                            <li><i class="fas fa-palette"></i> Colonie en couleurs</li>
-                            <li><i class="fas fa-heart"></i> Jeu des bonnes actions</li>
-                            <li><i class="fas fa-egg"></i> L’œuf de pâques</li>
-                            <li><i class="fas fa-film"></i> Colo’ciné</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div id="eclaireurs" class="tab-content">
-                <div class="prog-grid">
-                    <div class="day-card">
-                        <h4 class="text-gold">Mercredi 08 Avril</h4>
-                        <ul>
-                            <li><i class="fas fa-compass"></i> Exploration Technique</li>
-                            <li><i class="fas fa-campground"></i> Vie de patrouille</li>
-                            <li><i class="fas fa-utensils"></i> Cuisine Trappeur</li>
-                        </ul>
-                    </div>
-                    <div class="day-card">
-                        <h4 class="text-gold">Jeudi 09 Avril</h4>
-                        <ul>
-                            <li><i class="fas fa-chess-board"></i> Le Grand Jeu Yiriwa</li>
-                            <li><i class="fas fa-certificate"></i> Veillée de Promesse</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div id="cheminots" class="tab-content">
-                <div class="prog-grid">
-                    <div class="day-card">
-                        <h4 class="text-gold">Mercredi 08 Avril</h4>
-                        <ul>
-                            <li><i class="fas fa-hiking"></i> Raid de Branche</li>
-                            <li><i class="fas fa-comments"></i> Débats & Partage</li>
-                        </ul>
-                    </div>
-                    <div class="day-card">
-                        <h4 class="text-gold">Jeudi 09 Avril</h4>
-                        <ul>
-                            <li><i class="fas fa-lightbulb"></i> Projet Génération</li>
-                            <li><i class="fas fa-medal"></i> Engagement Scout</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div id="routiers" class="tab-content">
-                <div class="prog-grid">
-                    <div class="day-card">
-                        <h4 class="text-gold">Mercredi 08 Avril</h4>
-                        <ul>
-                            <li><i class="fas fa-hands-helping"></i> Raid de Service</li>
-                            <li><i class="fas fa-users-cog"></i> Leadership & Gestion</li>
-                        </ul>
-                    </div>
-                    <div class="day-card">
-                        <h4 class="text-gold">Jeudi 09 Avril</h4>
-                        <ul>
-                            <li><i class="fas fa-project-diagram"></i> Projet Communautaire</li>
-                            <li><i class="fas fa-road"></i> Veillée du Départ</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-    <section id="documents" class="container">
-        <h2 class="section-title">Documents <span class="text-gold">Officiels</span></h2>
-        <p class="section-desc">Téléchargez et imprimez les documents nécessaires pour la constitution du dossier de chaque scout.</p>
-
-        <div class="doc-grid">
-            <div class="doc-card" data-aos="flip-left">
-                <div class="doc-icon"><i class="fas fa-file-signature"></i></div>
-                <div class="doc-info">
-                    <h3 class="text-gold">Autorisation Parentale</h3>
-                    <p>Obligatoire pour tous les mineurs. À remplir et signer par le tuteur légal.</p>
-                    <a href="#" download class="btn-download">
-                        <i class="fas fa-download"></i> Télécharger
-                    </a>
-                </div>
-            </div>
-
-            <div class="doc-card" data-aos="flip-right">
-                <div class="doc-icon"><i class="fas fa-file-medical"></i></div>
-                <div class="doc-info">
-                    <h3 class="text-gold">Fiche Médicale</h3>
-                    <p>Essentielle pour le suivi de la santé de l'enfant durant les 5 jours de camp.</p>
-                    <a href="#" download class="btn-download">
-                        <i class="fas fa-download"></i> Télécharger
-                    </a>
-                </div>
-            </div>
-
-            <div class="doc-card" data-aos="flip-left">
-                <div class="doc-icon"><i class="fas fa-clipboard-list"></i></div>
-                <div class="doc-info">
-                    <h3 class="text-gold">Liste du Trousseau</h3>
-                    <p>La liste complète des effets personnels et du matériel de campisme à emporter.</p>
-                    <a href="#" download class="btn-download">
-                        <i class="fas fa-download"></i> Télécharger
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
     <section id="localisation" class="container">
         <h2 class="section-title">Comment se rendre à <span class="text-gold">Kpass</span> ?</h2>
         <p class="section-desc">Le village de Kpass est situé dans la commune de Dabou, un cadre paisible et verdoyant idéal pour nos activités.</p>
@@ -386,14 +438,10 @@
                         <p>Environ 1h15 depuis Abidjan (selon le trafic).</p>
                     </div>
                 </div>
-
-                <a href="https://maps.app.goo.gl/..." target="_blank" class="btn-location">
-                    <i class="fas fa-directions"></i> Ouvrir dans Maps
-                </a>
             </div>
         </div>
     </section>
-    <footer id="contact">
+    <footer>
         <div class="footer-top">
             <div class="container footer-grid">
                 
@@ -426,7 +474,7 @@
                         <li><i class="fas fa-phone-alt"></i><a href="tel:+2250707320704" style="color: #fff; text-decoration: none;"> +225 07 07 32 07 04</a></li>
                         <li><i class="fas fa-phone-alt"></i><a href="tel:+2250747310703" style="color: #fff; text-decoration: none;"> +225 07 47 31 07 03</a></li>
                         <li><i class="fas fa-phone-alt"></i><a href="tel:+2250778421775" style="color: #fff; text-decoration: none;"> +225 07 78 42 17 75</a></li>
-                        <li><i class="fas fa-envelope"></i> district.blacktailshark@gmail.com</li>
+                        <li><i class="fas fa-envelope"></i><a href="mailto:district.blacktailshark@gmail.com" style="color: #fff; text-decoration: none;"> district.blacktailshark@gmail.com</a></li>
                         <li><i class="fas fa-map-marker-alt"></i> Kpass, Commune de Dabou</li>
                     </ul>
                 </div>
@@ -446,11 +494,51 @@
             </div>
         </div>
     </footer>
+    <button id="backToTop" title="Retour en haut">
+        <i class="fas fa-arrow-up"></i>
+    </button>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init({
             duration: 1000, // Durée de l'animation en ms
             once: true,     // L'animation ne se joue qu'une seule fois
+        });
+
+        // Ton code pour le bouton BackToTop
+        window.onscroll = function() {
+            let btn = document.getElementById("backToTop");
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        };
+
+        document.getElementById("backToTop").onclick = function() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        };
+
+        console.log("Diagnostic lancé...");
+
+        // On utilise une méthode plus "brute" pour être sûr de capter le clic
+        document.addEventListener('click', function (e) {
+            // On vérifie si l'élément cliqué (ou son parent) a la classe btn-download
+            const btn = e.target.closest('.btn-download');
+            
+            if (btn) {
+                console.log("Bouton détecté !");
+                // alert("Le clic fonctionne !"); // Décommente pour un test visuel violent
+                
+                if (!btn.classList.contains('is-downloading')) {
+                    btn.classList.add('is-downloading');
+                    
+                    // On retire la classe après 3 secondes
+                    setTimeout(() => {
+                        btn.classList.remove('is-downloading');
+                        console.log("Animation terminée");
+                    }, 3000);
+                }
+            }
         });
     </script>
 </body>

@@ -414,6 +414,7 @@ html {
     color: var(--white);
     padding: 30px;
     border-radius: 20px;
+    border: 2px solid var(--gold); /* Bordure Or pour rappeler le thème */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -446,24 +447,6 @@ html {
     font-size: 0.9rem;
     opacity: 0.9;
     line-height: 1.4;
-}
-
-.btn-location {
-    background: var(--gold);
-    color: var(--green);
-    text-align: center;
-    padding: 12px;
-    border-radius: 10px;
-    font-family: 'Bebas Neue';
-    font-size: 1.2rem;
-    text-decoration: none;
-    transition: 0.3s;
-    margin-top: 10px;
-}
-
-.btn-location:hover {
-    background: var(--white);
-    transform: scale(1.05);
 }
 
 /* Responsive Localisation */
@@ -717,96 +700,129 @@ html {
     font-size: 1rem;
 }
 
-/* --- FOOTER COMPACT --- */
+/* --- FOOTER ULTRA-COMPACT --- */
 footer {
     background-color: var(--green);
     color: var(--alternative);
-    padding-top: 40px; /* Réduit de 80px à 40px */
-    border-top: 4px solid var(--gold);
+    padding: 25px 0 0 0; /* Réduit au minimum en haut */
+    border-top: 3px solid var(--gold);
 }
 
 .footer-grid {
     display: grid;
     grid-template-columns: 1.5fr 1fr 1fr 1fr;
-    gap: 20px; /* Espacement réduit entre colonnes */
-    padding-bottom: 30px; /* Réduit de 60px à 30px */
+    gap: 15px; /* Gap réduit */
+    padding-bottom: 20px; /* Espace réduit avant la barre noire */
 }
 
+/* On réduit les marges des titres */
 .footer-col h4 {
     font-family: 'Bebas Neue';
-    font-size: 1.4rem; /* Titres plus petits */
+    font-size: 1.2rem; 
     color: var(--gold);
-    margin-bottom: 15px; /* Espace réduit */
+    margin: 0 0 10px 0; /* Marge très serrée */
+    text-transform: uppercase;
 }
 
 .footer-logo {
     font-family: 'Bebas Neue';
-    font-size: 2rem; /* Logo réduit */
+    font-size: 1.8rem;
     color: var(--white);
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    line-height: 1;
 }
 
 .footer-description {
-    font-size: 0.85rem; /* Texte plus petit */
-    line-height: 1.4;
-    margin-bottom: 10px;
+    font-size: 0.8rem;
+    line-height: 1.3;
+    margin-bottom: 8px;
+    color: var(--white); /* Changé en blanc pour plus de douceur, l'or est pour les titres */
+    opacity: 0.9;
+}
+
+.footer-motto {
+    font-size: 0.7rem;
+    font-style: italic;
     color: var(--gold);
 }
 
-.footer-motto{
-    font-size: 0.75rem; /* Devise plus petite */
-    font-style: italic;
-    color: var(--beige);
-}
-
-.footer-contact{
+/* Suppression de la largeur fixe qui peut créer des décalages */
+.footer-contact {
     display: flex;
     flex-direction: column;
-    width: 250px;
+}
+
+.footer-links, .footer-contact {
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
 
 .footer-links li, .footer-contact li {
-    margin-bottom: 8px; /* Moins d'espace entre les liens */
-    font-size: 0.85rem;
+    margin-bottom: 4px; /* Espace minimal entre les lignes */
+    font-size: 0.8rem;
     color: var(--white);
-    list-style: none;
 }
 
 .footer-links a {
     color: var(--white);
     text-decoration: none;
-    transition: 0.3s;
-    font-weight: 700;
+    transition: 0.2s;
 }
 
 .footer-links a:hover {
     color: var(--gold);
+    padding-left: 3px;
+}
+
+/* Réglage des icônes sociales */
+.social-links {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
 }
 
 .social-icon {
-    width: 32px; /* Icônes plus petites */
-    height: 32px;
-    font-size: 1rem;
-    color: var(--white);
-    padding-left: 15px;
+    font-size: 1.1rem;
+    color: var(--gold);
+    transition: 0.3s;
 }
 
-/* Bottom bar plus fine */
+.social-icon:hover {
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+/* --- BARRE DE COPYRIGHT (MINIMALE) --- */
 .footer-bottom {
-    background: rgba(0, 0, 0, 0.2);
-    padding: 10px 20px; /* Réduit de 20px à 10px */
+    background: rgba(0, 0, 0, 0.3);
+    padding: 10px 0; /* Très fin */
+}
+
+.footer-bottom .container {
+    display: flex;
+    justify-content: space-between; /* Aligne copyright à gauche et crédits à droite */
+    align-items: center;
+    flex-direction: row; /* Remis en ligne pour gagner de la hauteur */
 }
 
 .footer-bottom p {
-    font-size: 0.75rem;
-    color: var(--beige);
+    font-size: 0.7rem;
+    margin: 0;
+    color: rgba(255,255,255,0.6);
 }
 
-.footer-bottom .container{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    line-height: 30px;
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        text-align: left;
+    }
+    .footer-bottom .container {
+        flex-direction: column; /* On repasse en colonne uniquement sur mobile */
+        text-align: center;
+        line-height: 1.5;
+    }
 }
 
 
@@ -821,31 +837,6 @@ footer {
     .price-banner { 
         text-align: center; 
         justify-content: center; 
-    }
-}
-
-@media (max-width: 992px) {
-    .footer-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media (max-width: 600px) {
-    .footer-grid {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-    .footer-col h4::after {
-        margin: 5px auto;
-    }
-    .footer-links a {
-        justify-content: center;
-    }
-    .footer-contact li {
-        justify-content: center;
-    }
-    .social-links {
-        justify-content: center;
     }
 }
 
@@ -884,9 +875,129 @@ footer {
 }
 
 #backToTop {
-    display: none; position: fixed; bottom: 30px; right: 30px;
-    z-index: 99; background-color: var(--red); color: white;
-    border: none; border-radius: 50%; width: 50px; height: 50px;
-    cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.3); transition: 0.3s;
+    display: none; /* Caché par défaut, le JS l'affiche au scroll */
+    position: fixed; 
+    bottom: 30px; 
+    right: 30px;
+    z-index: 999; /* Pour être sûr qu'il passe devant tout le reste */
+    background-color: var(--red); /* Le rouge terre du district */
+    color: white;
+    border: 2px solid var(--gold); /* Un contour doré pour le rappel */
+    border-radius: 50%; 
+    width: 50px; 
+    height: 50px;
+    font-size: 20px;
+    cursor: pointer; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3); 
+    transition: 0.3s ease-in-out;
 }
-#backToTop:hover { background-color: var(--gold); color: var(--green); }
+
+#backToTop:hover { 
+    background-color: var(--gold); 
+    color: var(--green); 
+    transform: scale(1.1); /* Petit effet de zoom au survol */
+}
+
+/* --- ÉTAT TERMINÉ DU COMPTE À REBOURS --- */
+.countdown-finished-box {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 2px solid var(--gold);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.finished-icon {
+    font-size: 3rem;
+    color: var(--gold);
+    margin-bottom: 15px;
+}
+
+.finished-text h3 {
+    font-family: 'Bebas Neue';
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.finished-text p {
+    font-size: 1rem;
+    opacity: 0.9;
+    margin-bottom: 20px;
+}
+
+.btn-finished {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--green);
+    padding: 10px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-family: 'Bebas Neue';
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+.btn-finished:hover {
+    background: var(--white);
+    transform: scale(1.05);
+}
+
+/* On applique un décalage à toutes les sections qui ont un ID (ancres) */
+section[id] {
+    scroll-margin-top: 100px; /* Ajuste cette valeur selon la hauteur réelle de ton menu */
+}
+
+/* --- CONTAINER DES BOUTONS --- */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espace entre les deux boutons */
+}
+
+/* Style de base pour les boutons de navigation */
+.btn-nav {
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: 0.3s all ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Bouton LIEU (Style contour / or) */
+.btn-outline {
+    border: 2px solid var(--gold);
+    color: var(--white);
+}
+
+.btn-outline:hover {
+    background: var(--gold);
+    color: var(--green);
+}
+
+/* Bouton S'INSCRIRE (Style plein / rouge) */
+.btn-fill {
+    background-color: var(--red); /* Le rouge de ton image */
+    color: var(--white);
+    border: 2px solid var(--red);
+    box-shadow: 0 4px 15px rgba(166, 61, 47, 0.3);
+}
+
+.btn-fill:hover {
+    background-color: transparent;
+    color: var(--red);
+}
+
+/* Ajustement pour le responsive */
+@media (max-width: 992px) {
+    .nav-actions {
+        display: none; /* On cache souvent les actions dans le menu burger sur mobile */
+    }
+}
+
