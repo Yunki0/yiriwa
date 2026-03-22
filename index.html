@@ -22,6 +22,12 @@
 
 </head>
 <body>
+    <!-- <div id="preloader">
+        <div class="loader-container">
+            <img src="assets/loader.png" alt="Yiriwa 2026 Loading" class="loader-logo">
+            <p class="loader-text">District Black Tail Shark — Chargement...</p>
+        </div>
+    </div> -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">YIRIWA <span>2026</span></div>
@@ -318,7 +324,7 @@
                 <div class="doc-info">
                     <h3 class="text-gold">Autorisation Parentale</h3>
                     <p>Obligatoire pour tous les mineurs. À remplir et signer par le tuteur légal.</p>
-                    <a href="" download class="btn-download">
+                    <a href="files/FICHE D'AUTORISATION PARENTALE BTS 2025_2026.pdf" download class="btn-download">
                         <i class="fas fa-download"></i> Télécharger
                     </a>
                 </div>
@@ -329,7 +335,7 @@
                 <div class="doc-info">
                     <h3 class="text-gold">Fiche Médicale</h3>
                     <p>Essentielle pour le suivi de la santé de l'enfant durant les 5 jours de camp.</p>
-                    <a href="" download class="btn-download">
+                    <a href="files/FICHE_MEDICALE_SCOUT_COMPLETE BTS 25-26.pdf" download class="btn-download">
                         <i class="fas fa-download"></i> Télécharger
                     </a>
                 </div>
@@ -520,33 +526,6 @@
                 btn.style.display = "none";
             }
         };
-
-        document.getElementById("backToTop").onclick = function() {
-            window.scrollTo({top: 0, behavior: 'smooth'});
-        };
-
-        console.log("Diagnostic lancé...");
-
-        // On utilise une méthode plus "brute" pour être sûr de capter le clic
-        document.addEventListener('click', function (e) {
-            // On vérifie si l'élément cliqué (ou son parent) a la classe btn-download
-            const btn = e.target.closest('.btn-download');
-            
-            if (btn) {
-                console.log("Bouton détecté !");
-                // alert("Le clic fonctionne !"); // Décommente pour un test visuel violent
-                
-                if (!btn.classList.contains('is-downloading')) {
-                    btn.classList.add('is-downloading');
-                    
-                    // On retire la classe après 3 secondes
-                    setTimeout(() => {
-                        btn.classList.remove('is-downloading');
-                        console.log("Animation terminée");
-                    }, 3000);
-                }
-            }
-        });
     </script>
 </body>
 </html>

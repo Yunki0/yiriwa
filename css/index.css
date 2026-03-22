@@ -1001,3 +1001,79 @@ section[id] {
     }
 }
 
+/* --- STYLE DU PRELOADER --- */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f0f7f9; /* Un bleu très pâle et lisse pour le fond */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Toujours au-dessus de tout */
+    transition: opacity 0.5s ease, visibility 0.5s;
+    font-family: 'Times New Roman', serif; /* Plus formel et élégant */
+}
+
+.loader-container {
+    text-align: center;
+    position: relative;
+    width: 250px; /* Taille du logo */
+    height: 250px;
+}
+
+.loader-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* La version pâle et translucide par défaut */
+    opacity: 0.15;
+    filter: grayscale(100%) contrast(150%) brightness(150%);
+    position: relative;
+    z-index: 1; /* Derrière l'animation */
+}
+
+/* L'animation de marée montante */
+.loader-container::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0%; /* Part de 0 */
+    background: url('images/image_5.png') no-repeat bottom center;
+    background-size: contain;
+    filter: grayscale(0%) contrast(100%) brightness(100%);
+    z-index: 2; /* Devant la version pâle */
+    animation: marée-montante 3s forwards cubic-bezier(0, 0, 0.1, 1);
+}
+
+.loader-text {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #1f4d3a; /* Ton vert forêt */
+    position: relative;
+    z-index: 3;
+    opacity: 0;
+    animation: fade-in-text 1s forwards 0.5s;
+}
+
+/* Animations */
+@keyframes marée-montante {
+    0% { height: 0%; }
+    100% { height: 100%; }
+}
+
+@keyframes fade-in-text {
+    to { opacity: 0.7; }
+}
+
+/* Classe pour cacher le loader avec un fondu */
+.loader-hidden {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important; /* Permet de cliquer à travers même s'il est encore là */
+    transition: opacity 0.6s ease, visibility 0.6s !important;
+}

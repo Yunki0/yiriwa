@@ -54,3 +54,13 @@ const countdown = () => {
 // Mise à jour chaque seconde
 setInterval(countdown, 1000);
 countdown(); // Appel immédiat pour éviter le "00" au chargement
+
+window.addEventListener('load', () => {
+    const preloader = document.getElementById('preloader');
+    
+    // On laisse le loader visible au moins 3 secondes pour l'effet visuel complet
+    // ou on l'enlève dès que tout est chargé (le 'load' event s'en charge)
+    setTimeout(() => {
+        preloader.classList.add('loader-hidden');
+    }, 3000); // 3 secondes (la durée de l'animation de marée)
+});
