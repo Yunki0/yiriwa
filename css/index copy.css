@@ -1,12 +1,12 @@
 /* --- Variables & Reset --- */
 :root {
-  --green: #1C2FA3; /* replaced by brand */
-  --red: #FF7A00; /* primary accent */
-  --gold: #F2C100;
-  --beige: #F6F6F6;
-  --dark: #001F49;
-  --white: #ffffff;
-  --shadow: 0 10px 30px rgba(0,0,0,0.1);
+    --green: #1F4D3A;
+    --red: #A63D2F;
+    --gold: #F2B705;
+    --beige: #F5EFE6;
+    --dark: #2c3e50;
+    --white: #ffffff;
+    --shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
 * { 
@@ -1076,18 +1076,4 @@ section[id] {
     visibility: hidden !important;
     pointer-events: none !important; /* Permet de cliquer à travers même s'il est encore là */
     transition: opacity 0.6s ease, visibility 0.6s !important;
-}
-
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.logo-img {
-  height: 45px;
-  width: auto;
-  object-fit: contain;
-  border-radius: 6px; /* Optionnel pour un rendu plus doux */
 }

@@ -51,9 +51,10 @@ const countdown = () => {
     }
 };
 
-// Mise à jour chaque seconde
-setInterval(countdown, 1000);
-countdown(); // Appel immédiat pour éviter le "00" au chargement
+document.addEventListener("DOMContentLoaded", () => {
+   countdown();
+   setInterval(countdown, 1000);
+});
 
 window.addEventListener('load', () => {
     const preloader = document.getElementById('preloader');

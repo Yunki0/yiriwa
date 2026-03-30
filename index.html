@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="icon" type="image/x-icon" href="assets/logo.jpg">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <script src="js/main.js"></script>
+    <script src="js/main.js" defer></script>
 
     <meta property="og:title" content="YIRIWA 2026 | Le Grand Rassemblement Scout du District Black Tail Shark" />
     <meta property="og:description" content="5 jours d'aventure, de partage et de foi au village de Kpass (Dabou). Ne manque pas ce rendez-vous unique de progression du 07 au 11 Avril 2026 ! Inscriptions ouvertes." />
@@ -30,8 +30,10 @@
     </div> -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo">YIRIWA <span>2026</span></div>
-            
+            <div class="logo">
+                <img src="assets/logo.jpg" alt="Logo Yiriwa" class="logo-img">
+                <span style="color: #fff;">YIRIWA</span><span>2026</span>
+            </div>
             <ul class="nav-links">
                 <li><a href="#accueil">Accueil</a></li>
                 <li><a href="#camp">Le Camp</a></li>
@@ -58,7 +60,7 @@
             <div class="hero-badges">
                 <div class="badge"><i class="fas fa-calendar-alt"></i> 7 - 11 Avril 2026</div>
                 <div class="badge"><i class="fas fa-map-marker-alt"></i> Kpass, Dabou</div>
-                <div class="badge"><i class="fas fa-wallet"></i> 13 000 FCFA</div>
+                <div class="badge"><i class="fas fa-wallet"></i> 11 500 FCFA</div>
             </div>
             <div id="countdown" class="countdown-container">
                 <div class="time-segment">
@@ -360,7 +362,7 @@
         <h2 class="section-title">Frais & <span class="text-gold">Paiements</span></h2>
         
         <div class="participation-intro">
-            <p>La participation s'élève à <strong>13 000 FCFA</strong> par scout. Les paiements sont collectés directement au sein des paroisses par les responsables désignés ci-dessous :</p>
+            <p>La participation s'élève à <strong>11 500 FCFA</strong> par scout. Les paiements sont collectés directement au sein des paroisses par les responsables désignés ci-dessous :</p>
         </div>
 
         <div class="table-container" data-aos="fade-left">
@@ -382,9 +384,9 @@
                     </tr>
                     <tr>
                         <td data-label="Paroisse">Sainte Bernadette de Promogim</td>
-                        <td data-label="Responsable">Cheftaine Anne-Emmanuelle</td>
+                        <td data-label="Responsable">Cheftaine Désirée Emmanuelle</td>
                         <td data-label="Contact">
-                            <a href="tel:0769394539" class="contact-link"><i class="fas fa-phone text-gold"></i> 07 69 39 65 39</a>
+                            <a href="tel:0748583349" class="contact-link"><i class="fas fa-phone text-gold"></i> 07 48 58 33 49</a>
                         </td>
                     </tr>
                     <tr>
@@ -505,7 +507,7 @@
         <div class="footer-bottom">
             <div class="container">
                 <p>&copy; 2026 District Black Tail Shark - Association des Scouts Catholiques de Côte d'Ivoire.</p>
-                <p class="credits">Propulsé par la Yunki0</p>
+                <p class="credits">Propulsé par Yunki0</p>
             </div>
         </div>
     </footer>
@@ -518,16 +520,6 @@
             duration: 1000, // Durée de l'animation en ms
             once: true,     // L'animation ne se joue qu'une seule fois
         });
-
-        // Ton code pour le bouton BackToTop
-        window.onscroll = function() {
-            let btn = document.getElementById("backToTop");
-            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-                btn.style.display = "block";
-            } else {
-                btn.style.display = "none";
-            }
-        };
     </script>
 </body>
 </html>
